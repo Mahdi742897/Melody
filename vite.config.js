@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   // base: "/Melody",
   plugins: [react()],
-  base: '/Melody/'
+  base: '/Melody'
 })
