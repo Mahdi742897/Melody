@@ -35,7 +35,7 @@ const TopPlay = () => {
       <div className="w-full flex-col">
         <div className="flex justify-between items-center">
           <h2 className="text-white text-2xl font-bold">Top Chart</h2>
-          <Link to="/top-chart">
+          <Link to="/Melody/top-chart">
             <p className="text-gray-300 text-base cursor-pointer">see more</p>
           </Link>
         </div>
@@ -76,7 +76,7 @@ const TopPlay = () => {
                     key={track?.key}
                     class="shadow-lg rounded-full w-1/4 h-auto"
                   >
-                    <Link to={`/artists/${track?.artists[0]?.adamid}`}>
+                    <Link to={`/Melody/artists/${track?.artists[0]?.adamid}`}>
                       <img
                         src={track?.images?.background}
                         className="rounded-full"
