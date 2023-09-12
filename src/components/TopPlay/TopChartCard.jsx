@@ -15,7 +15,7 @@ const TopChartCard = ({
       <h3 className="font-bold text-base text-white mr-3">{index + 1}</h3>
       <div className="flex justify-between items-center w-full">
         <div className="flex">
-          <Link to={`/songs/${track.key}`}>
+          <Link to={`/Melody/songs/${track.key}`}>
             <img
               src={track?.images?.coverart}
               alt={track?.titlez}
@@ -23,10 +23,10 @@ const TopChartCard = ({
             />
           </Link>
           <div className="flex flex-col justify-center mx-3">
-            <Link to={`/songs/${track.key}`}>
+            <Link to={`/Melody/songs/${track.key}`}>
               <p className="text-white text-base font-bold">{track.title}</p>
             </Link>
-            <Link to={`/artists/${track?.artists[0]?.adamid}`}>
+            <Link to={`/Melody/artists/${track?.artists[0]?.adamid}`}>
               <p className="text-gray-400 text-xs font-bold">
                 {track.subtitle}
               </p>
