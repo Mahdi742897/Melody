@@ -6,16 +6,20 @@ export const shazamApi = createApi({
     baseUrl: "https://shazam.p.rapidapi.com/",
     prepareHeaders: (headers) => {
       headers.set(
-        "X-RapidAPI-Key","92c0f76cb4msh2abf5890478ce16p1b973fjsn63d8f54525b1"
+        "X-RapidAPI-Key",
+        "92c0f76cb4msh2abf5890478ce16p1b973fjsn63d8f54525b1"
       );
       return headers;
     },
   }),
   endpoints: (builder) => ({
-    getAllPopularSongs: builder.query({query: () => "charts/track?locale=en-US&pageSize=20&startFrom=0"})
-  })
+    getAllPopularSongs: builder.query({
+      query: () => "charts/track?locale=en-US&pageSize=20&startFrom=0",
+    }),
+    getSongDetails: builder.query({
+      query: ({ songid }) => `songs/get-details?key=${songid}&locale=en-US`,
+    }),
+  }),
 });
 
-export const { useGetAllPopularSongsQuery } = shazamApi;
-
-
+export const { useGetAllPopularSongsQuery, useGetSongDetailsQuery } = shazamApi;
