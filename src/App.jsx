@@ -7,7 +7,7 @@ import { Sidebar, TopPlay } from "./components";
 
 const router = createBrowserRouter([
   {
-    path: "/Melody",
+    path: "/",
     element: <Root />,
     children: [
       {
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
 const App = () => {
   const { activeSong } = useSelector((state) => state.player);
   return (
-    <section className="flex bg-gradient-to-br from-black to-[#121286] min-w-min">
+    <section className="flex bg-gradient-to-br from-black to-[#121286]">
         <RouterProvider router={router} />
       {/* <div className="relative xl:sticky top-0 h-fit inline">
         <TopPlay />
@@ -36,7 +36,7 @@ const App = () => {
           <MusicPlayer />
         </div>
       )}
-    </section>
+     </section>
   );
 };
 export default App;

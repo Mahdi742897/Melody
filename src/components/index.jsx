@@ -4,6 +4,8 @@ import SongCard from "./SongCard";
 import PlayPause from "./PlayPause";
 import  Sidebar  from "./Sidebar/Sidebar";
 import TopPlay from "./TopPlay/TopPlay";
+import DetailsHeader from "./DetailsHeader";
+import RelatedSongs from "./RelatedSongs";
 
 
 export 
@@ -14,5 +16,6 @@ SongCard,
 Sidebar,
 PlayPause,
 TopPlay,
-
+DetailsHeader,
+RelatedSongs
 };

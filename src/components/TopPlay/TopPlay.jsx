@@ -29,9 +29,9 @@ const TopPlay = () => {
     dispatch(setActiveSong({ song, data, index }));
     dispatch(playPause(true));
   };
-
-  return (
-    <div className="ml-0 xl:ml-6 xl:mb-0 mb-6 flex-1 flex flex-col md:max-w-[500px] md:min-h-[calc(100vh-200px)]دحئ ">
+  data &&  (
+    
+    <div className="ml-0 xl:ml-6 xl:mb-0 mb-6 relative  flex-1 flex flex-col md:max-w-[500px] md:min-h-[calc(100vh-200px)]">
       <div className="w-full flex-col">
         <div className="flex justify-between items-center">
           <h2 className="text-white text-2xl font-bold">Top Chart</h2>
@@ -89,7 +89,7 @@ const TopPlay = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default TopPlay;

@@ -14,11 +14,11 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className={`hidden flex-col lg:w-[950px] md:w-[1100px] py-10 px-4 bg-[#191624] flex-grow items-center ${
+        className={`hidden flex-col lg:min-w-[250px] md:w-[1100px] py-10 px-4 bg-[#191624] flex-grow items-start ${
           isFetching ? "hidden" : "md:flex"
         }`}
       >
-        <img src={logo} alt="logo" className="w-20" />
+        <img src={logo} alt="logo" className="w-20 mx-auto" />
 
         <NavLinks />
       </div>
