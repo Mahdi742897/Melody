@@ -25,18 +25,15 @@ const router = createBrowserRouter([
 const App = () => {
   const { activeSong } = useSelector((state) => state.player);
   return (
-    <section className="flex bg-gradient-to-br from-black to-[#121286]">
+    <section className="flex bg-gradient-to-br from-black to-[#121286] min-h-screen">
         <RouterProvider router={router} />
-      {/* <div className="relative xl:sticky top-0 h-fit inline">
-        <TopPlay />
-      </div> */}
 
-      {activeSong?.title && (
-        <div className="fixed h-20 bottom-0 left-0 right-0 flex animate-slideup bg-gradient-to-br from-white/10 to-[#2a2a80] backdrop-blur-lg rounded-t-3xl z-10">
-          <MusicPlayer />
-        </div>
-      )}
-     </section>
+       {activeSong?.title && (
+         <div className="fixed h-20 bottom-0 left-0 right-0 flex animate-slideup bg-gradient-to-br from-white/10 to-[#2a2a80] backdrop-blur-lg rounded-t-3xl z-10">
+           <MusicPlayer />
+         </div>
+       )}
+      </section>
   );
 };
 export default App;

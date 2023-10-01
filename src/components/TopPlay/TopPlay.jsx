@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "swiper/element/bundle";
 register();
-// import 'swiper/elements/bundle';
+
+import Error from "../Error";
 
 import PlayPause from "../PlayPause";
 import { setActiveSong, playPause } from "../../redux/features/playerSlice";
@@ -15,7 +16,7 @@ import Swiper from "swiper";
 const TopPlay = () => {
   const dispatch = useDispatch();
   const { activeSong, isPlaying } = useSelector((state) => state.player);
-  const { data } = useGetAllPopularSongsQuery();
+  const { data,error } = useGetAllPopularSongsQuery();
 
   const topPlay = data?.tracks.slice(0, 5);
 
@@ -25,12 +26,15 @@ const TopPlay = () => {
     dispatch(playPause(false));
   };
 
-  const handlePlayClick = (song,index) => {
+  const handlePlayClick = (song, index) => {
     dispatch(setActiveSong({ song, data, index }));
     dispatch(playPause(true));
   };
-  data &&  (
-    
+
+
+  
+   if (data) return (
+
     <div className="ml-0 xl:ml-6 xl:mb-0 mb-6 relative  flex-1 flex flex-col md:max-w-[500px] md:min-h-[calc(100vh-200px)]">
       <div className="w-full flex-col">
         <div className="flex justify-between items-center">
@@ -50,7 +54,7 @@ const TopPlay = () => {
                   activeSong={activeSong}
                   isPlaying={isPlaying}
                   handlePauseClick={handlePauseClick}
-                  handlePlayClick={() =>  handlePlayClick(track,index)}
+                  handlePlayClick={() => handlePlayClick(track, index)}
                 />
               );
             })}
@@ -89,7 +93,10 @@ const TopPlay = () => {
         </div>
       </div>
     </div>
+  
   )
+  
+  
 };
 
 export default TopPlay;

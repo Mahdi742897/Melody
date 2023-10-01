@@ -14,7 +14,7 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className={`hidden flex-col lg:min-w-[250px] md:w-[1100px] py-10 px-4 bg-[#191624] flex-grow items-start ${
+        className={`hidden flex-col lg:max-w-[220px] md:w-[1100px] py-10 px-4 bg-[#191624] flex-grow items-start ${
           isFetching ? "hidden" : "md:flex"
         }`}
       >
