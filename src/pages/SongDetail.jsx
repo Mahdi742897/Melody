@@ -38,7 +38,7 @@ const SongDetail = () => {
   };
 
   return (
-    <div className="mt-5 px-4 w-full">
+    <div className="mt-5 px-4">
       <DetailsHeader artistId="" artistData="" songData={songData} />
       <div className="mb-32">
         <h2 className="text-2xl font-bold text-white">Lyrics :</h2>

@@ -42,7 +42,7 @@ const Sidebar = () => {
 {/* mobile sidebar */}
 
       <div
-        className={`fixed flex justify-center items-center flex-col top-0 h-screen w-2/3 bg-gradient-to-tl from-white/10
+        className={`fixed flex justify-start items-start flex-col top-0 h-screen w-2/3 bg-gradient-to-tl from-white/10
          to-[#483d8b] backdrop-blur-lg z-50 md:hidden transition-all duration-[350ms] p-6 ${
           mobileMenuOpen ? "left-0" : "-left-full"
         }`}

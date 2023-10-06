@@ -10,14 +10,15 @@ const RelatedSongs = ({
 }) => {
   console.log(data.tracks);
 
-  if (data) return (
+  {
+    data || data == !undefined && (
       <div className="flex flex-col mt-5">
         <h1 className="text-2xl font-bold text-white">Related Songs: </h1>
         <div className="mt-6 w-full flex flex-col">
           {data?.tracks.map((song, index) => {
             return (
               <SongBar
-                // key={song?.key}
+                key={song?.key}
                 isPlaying={isPlaying}
                 activeSong={activeSong}
                 handlePauseClick={handlePauseClick}
@@ -30,6 +31,7 @@ const RelatedSongs = ({
         </div>
       </div>
     );
+  }
 };
 
 export default RelatedSongs;

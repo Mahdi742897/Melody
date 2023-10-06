@@ -31,9 +31,11 @@ const TopPlay = () => {
     dispatch(playPause(true));
   };
 
+  if(error) return <Error/>
 
+console.log(data);
   
-   if (data) return (
+  return (
 
     <div className="ml-0 xl:ml-6 xl:mb-0 mb-6 relative  flex-1 flex flex-col md:max-w-[500px] md:min-h-[calc(100vh-200px)]">
       <div className="w-full flex-col">
@@ -44,6 +46,7 @@ const TopPlay = () => {
           </Link>
         </div>
         <div className="mt-4 flex flex-col gap-1">
+        
           {topPlay &&
             topPlay.map((track, index) => {
               return (
@@ -73,7 +76,7 @@ const TopPlay = () => {
             free-mode="true"
             class="mt-5"
           >
-            {topArtists &&
+            {topArtists === !undefined ?
               topArtists.map((track, index) => {
                 return (
                   <swiper-slide
@@ -88,7 +91,7 @@ const TopPlay = () => {
                     </Link>
                   </swiper-slide>
                 );
-              })}
+              }): <Error title= "Top Artists Not Available Please Try Again"/>}
           </swiper-container>
         </div>
       </div>

@@ -2,7 +2,7 @@
   "name": "melody",
   "private": true,
   "version": "0.0.0",
-  "homepage":"https://Mahdi742897.github.io/Melody",
+  "homepage": "https://Mahdi742897.github.io/Melody",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -16,6 +16,7 @@
     "@reduxjs/toolkit": "^1.9.5",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
+    "patch-package": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",

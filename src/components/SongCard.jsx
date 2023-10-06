@@ -51,7 +51,7 @@ const SongCard = ({ song, index, activeSong, isPlaying, data }) => {
               song.artists ? `/Melody/artists/${song.artists[0].adamid}` : "/Melody/top-artists"
             }
           >
-            {song.artists ? song.artists[0].alias : ""}
+            {song.artists ? song?.subtitle : "no artist"}
             </Link>
         </p>
       </div>
