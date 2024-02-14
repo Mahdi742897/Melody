@@ -14,6 +14,7 @@ const SongCard = ({ song, index, activeSong, isPlaying, data }) => {
   const handlePlayClick = () => {
     dispatch(setActiveSong({ song, data, index }));
     dispatch(playPause(true));
+    
   };
   // console.log(song?.artists[0]?.adamid);
   return (

@@ -17,11 +17,13 @@ export const shazamApi = createApi({
       query: () => "charts/track?locale=en-US&pageSize=20&startFrom=0",
     }),
     getSongDetails: builder.query({
-      query: ({ songid }) => `songs/get-details?key=${songid}&locale=en-US`,
+      query: ({ songid }) => `shazam-songs/get-details?id=${songid}&locale=en-US`,
     }),
     getSongRelated: builder.query({
-      query: ({ songid }) =>
-        `songs/list-recommendations?key=${songid}`,
+      query: ({ songid }) => `shazam-songs/list-similarities?id=track-similarities-id-${songid}&locale=en-US`,
+    }),
+    GetArtistDetail: builder.query({
+      query: ({ artistid }) => `artists/get-details?id=${artistid}&l=en-US`,
     }),
   }),
 });
@@ -30,4 +32,5 @@ export const {
   useGetAllPopularSongsQuery,
   useGetSongDetailsQuery,
   useGetSongRelatedQuery,
+  useGetArtistDetailQuery,
 } = shazamApi;

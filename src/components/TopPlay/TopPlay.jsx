@@ -33,7 +33,8 @@ const TopPlay = () => {
 
   if(error) return <Error/>
 
-console.log(data);
+console.log("activeSong activeSong activeSong",activeSong);
+console.log("data data data",data);
   
   return (
 
@@ -76,7 +77,7 @@ console.log(data);
             free-mode="true"
             class="mt-5"
           >
-            {topArtists === !undefined ?
+            {topArtists &&
               topArtists.map((track, index) => {
                 return (
                   <swiper-slide
@@ -91,7 +92,8 @@ console.log(data);
                     </Link>
                   </swiper-slide>
                 );
-              }): <Error title= "Top Artists Not Available Please Try Again"/>}
+              })
+            }
           </swiper-container>
         </div>
       </div>
